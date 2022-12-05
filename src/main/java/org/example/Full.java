@@ -2,6 +2,10 @@ package org.example;
 
 public class Full extends State {
 
+    @Override
+    public String onStartShopping() {
+        return "You are shopping";
+    }
     Full(Shop shop) {
         super(shop);
     }

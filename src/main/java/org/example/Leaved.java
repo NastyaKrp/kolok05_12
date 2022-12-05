@@ -8,30 +8,36 @@ public class Leaved extends State {
     }
 
     @Override
+    public String onStartShopping() {
+        shop.changeState(new Buying(shop));
+        shop.startShopping();
+        return "You start shopping again";
+    }
+    @Override
     public String onLeave() {
         return "You have leaved the shop";
     }
 
     @Override
     public String onBuy() {
-        return "You have leaved the shop";
+        return "You have leaved the shop. You should start  shopping again";
     }
 
     @Override
     public String onNext() {
-        return "Locked...";
+        return "Locked... You should start  shopping again";
     }
 
     @Override
     public String onPrevious() {
-        return "Locked...";
+        return "Locked... You should start  shopping again";
     }
 
     @Override
     public String onTake() {
-        return "Locked...";
+        return "Locked... You should start  shopping again";
     }
 
     @Override
-    public String onPut() { return "Locked...";}
+    public String onPut() { return "Locked... You should start  shopping again";}
 }

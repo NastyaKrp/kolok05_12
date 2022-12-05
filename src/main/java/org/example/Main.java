@@ -6,6 +6,7 @@ abstract class State {
         this.shop = shop;
     }
 
+    public abstract String onStartShopping();
     public abstract String onBuy();
     public abstract String onLeave();
     public abstract String onNext();

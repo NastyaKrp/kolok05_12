@@ -21,8 +21,11 @@ public class UI {
         context.add(textField);
         context.add(buttons);
 
-        JButton play = new JButton("Buy");
-        play.addActionListener(e -> textField.setText(shop.getState().onBuy()));
+
+        JButton start = new JButton("Start");
+        start.addActionListener(e -> textField.setText(shop.getState().onStartShopping()));
+        JButton buy = new JButton("Buy");
+        buy.addActionListener(e -> textField.setText(shop.getState().onBuy()));
         JButton stop = new JButton("Leave");
         stop.addActionListener(e -> textField.setText(shop.getState().onLeave()));
         JButton next = new JButton("Next");
@@ -30,12 +33,13 @@ public class UI {
         JButton prev = new JButton("Prev");
         prev.addActionListener(e -> textField.setText(shop.getState().onPrevious()));
         JButton take = new JButton("Take");
-        next.addActionListener(e -> textField.setText(shop.getState().onPut()));
+        take.addActionListener(e -> textField.setText(shop.getState().onTake()));
         JButton put = new JButton("Put");
-        prev.addActionListener(e -> textField.setText(shop.getState().onTake()));
+        put.addActionListener(e -> textField.setText(shop.getState().onPut()));
         frame.setVisible(true);
         frame.setSize(600, 100);
-        buttons.add(play);
+        buttons.add(start);
+        buttons.add(buy);
         buttons.add(stop);
         buttons.add(next);
         buttons.add(prev);

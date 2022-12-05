@@ -39,10 +39,6 @@ class Shop {
 
     public int getCount_bag() { return count_bag;}
 
-    public boolean isShopping() {
-        return shopping;
-    }
-
     public String startShopping() {
         return "looking at " + shoplist.get(currentItem);
     }
@@ -61,9 +57,5 @@ class Shop {
             currentItem = shoplist.size() - 1;
         }
         return "looking at " + shoplist.get(currentItem);
-    }
-
-    public void setCurrentTrackAfterStop() {
-        this.currentItem = 0;
     }
 }

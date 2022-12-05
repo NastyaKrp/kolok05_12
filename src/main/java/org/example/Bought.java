@@ -10,6 +10,11 @@ public class Bought extends State {
     }
 
     @Override
+    public String onStartShopping() {
+        shop.changeState(new Buying(shop));
+        return "You start shopping";
+    }
+    @Override
     public String onBuy() {
        return "You don't have any item in your bag";
     }

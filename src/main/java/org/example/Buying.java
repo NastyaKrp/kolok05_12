@@ -7,6 +7,10 @@ public class Buying extends State {
     }
 
     @Override
+    public String onStartShopping() {
+        return shop.startShopping();
+    }
+    @Override
     public String onBuy() {
         if(shop.getCount_bag() == 0)
         {
