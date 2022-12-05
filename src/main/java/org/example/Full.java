@@ -32,7 +32,8 @@ public class Full extends State {
 
     @Override
     public String onTake() {
-        return "You can't take item, you have " + shop.getCount_bag() + " items in your bag";
+        shop.takeThing();
+        return "You take item, you have " + shop.getCount_bag() + " items in your bag";
     }
 
     @Override
@@ -44,6 +45,7 @@ public class Full extends State {
         }
         else
         {
+            shop.putThing();
             shop.changeState(new Buying(shop));
             return "You put item out of bag, you have " + shop.getCount_bag() + " items in your bag";
         }

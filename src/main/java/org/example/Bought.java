@@ -12,7 +12,7 @@ public class Bought extends State {
     @Override
     public String onStartShopping() {
         shop.changeState(new Buying(shop));
-        return "You start shopping";
+        return "You start shopping, you are looking at 1 item";
     }
     @Override
     public String onBuy() {

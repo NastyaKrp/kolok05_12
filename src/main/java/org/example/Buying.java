@@ -50,15 +50,12 @@ public class Buying extends State {
 
     @Override
     public String onTake() {
-        if(shop.getCount_bag() < 7)
+        shop.takeThing();
+        if(shop.getCount_bag() > 7)
         {
-            shop.takeThing();
-            return "You take item, you have " + shop.getCount_bag() + " items in your bag";
+            shop.changeState(new Full(shop));
         }
-        else
-        {
-            return "You can't take item, you have " + shop.getCount_bag() + " items in your bag";
-        }
+        return "You take item, you have " + shop.getCount_bag() + " items in your bag";
     }
 
     @Override

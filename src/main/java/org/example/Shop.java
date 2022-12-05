@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-class Shop {
+public class Shop {
     private State state;
     private boolean shopping = false;
 
